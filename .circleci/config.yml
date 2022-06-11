@@ -16,9 +16,3 @@ jobs:
     steps:
      - checkout
      - run: echo "Staging Environment"
-  workflows:
-    version: 2
-    develop_staging:
-      jobs:
-        - develop
-        - staging
