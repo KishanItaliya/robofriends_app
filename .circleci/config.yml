@@ -2,7 +2,7 @@
 version: 2
 
 jobs:
-  develop:
+  build:
     docker:
     # Primary container image where all steps run
      - image: circleci/ruby:2.4.1
