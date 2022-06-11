@@ -1,0 +1,24 @@
+# CircleCI configuration file
+version: 2
+
+jobs:
+  develop:
+    docker:
+    # Primary container image where all steps run
+     - image: circleci/ruby:2.4.1
+    steps:
+     - checkout
+     - run: echo "Develop Environment"
+  staging:
+    docker:
+    # Primary container image where all steps run
+     - image: circleci/ruby:2.4.1
+    steps:
+     - checkout
+     - run: echo "Staging Environment"
+  workflows:
+    version: 2
+    develop_staging:
+      jobs:
+        - develop
+        - staging
